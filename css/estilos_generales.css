@@ -84,7 +84,11 @@ nav {
     width: 30%;
 }
 
-.opciones-nav:hover {
+.opciones-nav p {
+    padding: 0.25em;
+}
+
+.opciones-nav p:hover {
     cursor: pointer;
     color: #0F3433;
     background-color: #F9BC60;
