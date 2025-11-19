@@ -71,7 +71,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     background-color: #0F3433;
-    height: 40px;
+    height: auto;
 }
 
 .opciones-nav {
@@ -81,7 +81,7 @@ nav {
     justify-content: center;
     align-items: center;
     font-weight: 100;
-    width: 20%;
+    width: 30%;
 }
 
 .opciones-nav:hover {
