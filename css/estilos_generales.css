@@ -108,13 +108,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0F3433;
     height: 60px;
 }
 
 footer p {
     font-size: 1.35rem;
-    color: #E8E4E6;
+    color: #0F3433;
     letter-spacing: 2px;
 }
 
