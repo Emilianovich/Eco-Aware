@@ -1,0 +1,54 @@
+main {
+    border: 2px solid black;
+}
+
+#resumen-cambio-climatico {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
+}
+
+#resumen-cambio-climatico article>p {
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+    padding: 0.5em;
+}
+
+#resumen-cambio-climatico article p {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    color: #004643;
+}
+
+.frame-verde {
+    margin-top: 1.5em;
+    background-color: #004643;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.contenedor-columnas {
+    display:flex;
+    gap: 20px;
+}
+
+.col-izq {
+    flex: 1;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    color: #fff;
+}
+
+p {
+    border-color: white;
+    text-align: justify;
+    
+}
