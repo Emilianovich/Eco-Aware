@@ -2,7 +2,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    border: 2px solid white;
 }
 
 #contenedor-frase {
