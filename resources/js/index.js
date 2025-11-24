@@ -21,7 +21,7 @@ logoHome.addEventListener("mouseover", () => {
     logoHome.style.cursor = "pointer";
 })
 logoHome.addEventListener("click", () => {
-    window.location.href = "../html/home.html";
+    window.location.href = "/html/index.html";
 });
 
 /*Selección del nav*/
