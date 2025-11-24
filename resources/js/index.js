@@ -21,5 +21,22 @@ logoHome.addEventListener("mouseover", () => {
     logoHome.style.cursor = "pointer";
 })
 logoHome.addEventListener("click", () => {
-    window.location.href = "../html/home.html";
+    window.location.href = "/html/index.html";
 });
+
+/*Selección del nav*/
+const opcionesNav = document.querySelectorAll("div.opciones-nav");
+const opcionSeleccionada = document.getElementById("opcion-nav-seleccionada");
+opcionesNav.forEach((opcion) => {
+    opcion.addEventListener("mouseover", () => {
+        if (opcion.id !== "opcion-nav-seleccionada") {
+            opcion.style.cursor = "pointer";
+            opcionSeleccionada.classList.remove("nav-selected");
+        }
+    })
+    opcion.addEventListener("mouseout", () => {
+        if (opcion.id !== "opcion-nav-seleccionada") {
+            opcionSeleccionada.classList.add("nav-selected");
+        }
+    })
+})
