@@ -26,17 +26,25 @@ logoHome.addEventListener("click", () => {
 
 /*Selección del nav*/
 const opcionesNav = document.querySelectorAll("div.opciones-nav");
-const opcionSeleccionada = document.getElementById("opcion-nav-seleccionada");
+let hayOpcionSeleccionada;
 opcionesNav.forEach((opcion) => {
-    opcion.addEventListener("mouseover", () => {
-        if (opcion.id !== "opcion-nav-seleccionada") {
-            opcion.style.cursor = "pointer";
-            opcionSeleccionada.classList.remove("nav-selected");
-        }
-    })
-    opcion.addEventListener("mouseout", () => {
-        if (opcion.id !== "opcion-nav-seleccionada") {
-            opcionSeleccionada.classList.add("nav-selected");
-        }
-    })
+    if (opcion.id === "opcion-nav-seleccionada") {
+        hayOpcionSeleccionada = true;
+    }
 })
+if (hayOpcionSeleccionada  !== undefined) {
+    const opcionSeleccionada = document.getElementById("opcion-nav-seleccionada");
+    opcionesNav.forEach((opcion) => {
+        opcion.addEventListener("mouseover", () => {
+            if (opcion.id !== "opcion-nav-seleccionada") {
+                opcion.style.cursor = "pointer";
+                opcionSeleccionada.classList.remove("nav-selected");
+            }
+        })
+        opcion.addEventListener("mouseout", () => {
+            if (opcion.id !== "opcion-nav-seleccionada") {
+                opcionSeleccionada.classList.add("nav-selected");
+            }
+        })
+    })
+}
