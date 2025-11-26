@@ -7,19 +7,33 @@ const definicionesCC = [
     "Se refiere a los cambios a largo plazo de las temperaturas y los patrones climáticos. Dichos cambios pueden ser naturales, debido a variaciones en la actividad solar o erupciones volcánicas grandes. Pero desde el siglo XIX, las actividades humanas han sido el principal motor del cambio climático, debido principalmente a la quema de combustibles fósiles como el carbón, el petróleo y el gas.",
     "Es la modificación del clima que ha tenido lugar respecto de su historial a escala regional y global. En general, se trata de cambios de orden natural, pero actualmente, se los encuentra asociados con el impacto humano sobre el planeta.  Se trata de un fenómeno complejo con numerosas variables como los ciclos del agua, vientos y manchas solares, posición de la Luna, impactos de meteoritos, entre otros."
 ];
+for (let i = 0; i < ccLogoSelecionado.length; i++) {
+    ccLogoSelecionado[i].addEventListener('mouseover', () => {
+        ccLogoSelecionado[i].style.cursor = "pointer";
+        if (!ccLogoSelecionado[i].classList.contains("logo-cc-seleccionado")) {
+            ccLogoSelecionado[i].classList.add('logos-hover');
+        }
+    });
+    ccLogoSelecionado[i].addEventListener('mouseout', () => {
+        if (!ccLogoSelecionado[i].classList.contains("logo-cc-seleccionado")) {
+            ccLogoSelecionado[i].classList.remove('logos-hover');
+        }
+    });
+    ccLogoSelecionado[i].addEventListener("click", () => {
+        ccLogoSelecionado[i].classList.remove("logos-hover");
+        if (!ccLogoSelecionado[i].classList.contains("logo-cc-seleccionado")) {
+            definicionCC.textContent = definicionesCC[i];
+            ccLogoAnteriorSelecionado.classList.remove("logo-cc-seleccionado");
+            ccLogoSelecionado[i].classList.add("logo-cc-seleccionado");
+            ccLogoAnteriorSelecionado = ccLogoSelecionado[i];
+        }
+    });
+}
 
 /*Manejo de imágenes del calentamiento global*/
 const contenedorImagenesCG = Array.from(document.querySelectorAll(".cuadro-imagen"));
 const imagenesCG = Array.from(document.querySelectorAll(".cuadro-imagen img"));
 const causasCG = Array.from(document.querySelectorAll(".texto-imagen h2"));
-const eiLogoSelecionado = Array.from(document.querySelectorAll(".logos-ei"));
-let eiLogoAnteriorSelecionado = document.querySelector(".logo-ei-seleccionado");
-const definicionEI = document.getElementById("definicion-ei");
-const definicionesEI = [
-    "Es un fenómeno natural que ayuda a mantener el nivel medio de temperatura en la superficie del planeta. Es el proceso mediante el cual la superficie terrestre absorbe aproximadamente el 70 % de la radiación solar y la devuelve a la atmósfera en forma de radiación infrarroja. Parte de esta radiación escapa al espacio, mientras que la porción restante es retenida por los gases de efecto invernadero.",
-    "Es la forma en que el calor queda atrapado cerca de la superficie de la Tierra por los \"gases de efecto invernadero”. La Tierra es envuelta como en una manta que mantiene al planeta más cálido de lo que sería sin ella.",
-    "El efecto invernadero se define como un fenómeno natural por el que unos gases determinados que componen la atmósfera retienen parte de la energía solar reflejada por el suelo, absorbiéndola y transformándola en un movimiento molecular interno que produce un aumento de la temperatura."
-];
 for (let i = 0; i < contenedorImagenesCG.length; i++) {
     contenedorImagenesCG[i].addEventListener("mouseover", () => {
         contenedorImagenesCG[i].style.cursor = "default";
@@ -32,19 +46,29 @@ for (let i = 0; i < contenedorImagenesCG.length; i++) {
     });
 }
 
-for (let i = 0; i < ccLogoSelecionado.length; i++) {
-    ccLogoSelecionado[i].addEventListener("click", () => {
-        if (!ccLogoSelecionado[i].classList.contains("logo-cc-seleccionado")) {
-            definicionCC.textContent = definicionesCC[i];
-            ccLogoAnteriorSelecionado.classList.remove("logo-cc-seleccionado");
-            ccLogoSelecionado[i].classList.add("logo-cc-seleccionado");
-            ccLogoAnteriorSelecionado = ccLogoSelecionado[i];
+/*Manejo de las imágenes del efecto invernadero*/
+const eiLogoSelecionado = Array.from(document.querySelectorAll(".logos-ei"));
+let eiLogoAnteriorSelecionado = document.querySelector(".logo-ei-seleccionado");
+const definicionEI = document.getElementById("definicion-ei");
+const definicionesEI = [
+    "Es un fenómeno natural que ayuda a mantener el nivel medio de temperatura en la superficie del planeta. Es el proceso mediante el cual la superficie terrestre absorbe aproximadamente el 70 % de la radiación solar y la devuelve a la atmósfera en forma de radiación infrarroja. Parte de esta radiación escapa al espacio, mientras que la porción restante es retenida por los gases de efecto invernadero.",
+    "Es la forma en que el calor queda atrapado cerca de la superficie de la Tierra por los \"gases de efecto invernadero”. La Tierra es envuelta como en una manta que mantiene al planeta más cálido de lo que sería sin ella.",
+    "El efecto invernadero se define como un fenómeno natural por el que unos gases determinados que componen la atmósfera retienen parte de la energía solar reflejada por el suelo, absorbiéndola y transformándola en un movimiento molecular interno que produce un aumento de la temperatura."
+];
+for (let i = 0; i < eiLogoSelecionado.length; i++) {
+    eiLogoSelecionado[i].addEventListener('mouseover', () => {
+        eiLogoSelecionado[i].style.cursor = "pointer";
+        if (!eiLogoSelecionado[i].classList.contains("logo-ei-seleccionado")) {
+            eiLogoSelecionado[i].classList.add('logos-hover');
         }
     });
-}
-
-for (let i = 0; i < eiLogoSelecionado.length; i++) {
+    eiLogoSelecionado[i].addEventListener('mouseout', () => {
+        if (!eiLogoSelecionado[i].classList.contains("logo-ei-seleccionado")) {
+            eiLogoSelecionado[i].classList.remove('logos-hover');
+        }
+    });
     eiLogoSelecionado[i].addEventListener("click", () => {
+        eiLogoSelecionado[i].classList.remove('logos-hover');
         if (!eiLogoSelecionado[i].classList.contains("logo-ei-seleccionado")) {
             definicionEI.textContent = definicionesEI[i];
             eiLogoAnteriorSelecionado.classList.remove("logo-ei-seleccionado");
@@ -100,6 +124,7 @@ function moverGaleria(indice) {
     circulosCG[indice].classList.add("circulo-seleccionado");
 }
 
+/*Lógica para la galería - Flecha izquierda*/
 flechaIzquierdaCG.addEventListener("click", () => {
     if (circulosCG[indexCG].classList.contains("circulo-seleccionado")) {
         circulosCG[indexCG].classList.remove("circulo-seleccionado");
@@ -114,6 +139,7 @@ flechaIzquierdaCG.addEventListener("click", () => {
     }
 })
 
+/*Lógica para la galería - Flecha derecha*/
 flechaDerechaCG.addEventListener("click", () => {
     if (circulosCG[indexCG].classList.contains("circulo-seleccionado")) {
         circulosCG[indexCG].classList.remove("circulo-seleccionado");
@@ -128,6 +154,7 @@ flechaDerechaCG.addEventListener("click", () => {
     }
 });
 
+/*Manejo del hover para la galería de imágenes de consecuencias del calentamiento global*/
 contenedorImagenCG.addEventListener("mouseover", () => {
     contenedorImagenCG.style.cursor = "default";
     ImagenCG.classList.add("cambiar-opacidad-img");

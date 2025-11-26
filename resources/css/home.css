@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -48,48 +52,74 @@ main {
 }
 
 #carousel-cambio-climatico {
-    display: flex;
+    position: relative;
     background-color: #004643;
     width: 100%;
-    height: fit-content;
+    height: 250px;
     overflow-x: hidden;
+    padding: 1em;
 }
 
 #carousel-cambio-climatico::-webkit-scrollbar {
     display: none;
 }
 
-.contenedor-carousel {
-    width: max-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    animation: carousel 5s infinite linear;
-}
-
 .cuadros-carousel {
-    flex: 0 0 auto;
-    width: 300px;
+    position: absolute;
+    width: 350px;
     height: 250px;
+    left: 100%;
     background: #D9D9D9;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin-right: 1em;
+    border-radius: 1em;
+    animation: moverCarrusel 20s linear infinite;
 }
 
-@keyframes carousel {
-    from {
-        transform: translateX(0);
-    }
+.cuadros-carousel img {
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+}
+
+/*
+.hover-img-carrusel {
+    transform: scale(2);
+}*/
+
+.cuadro1 {
+    background-color: yellow;
+    animation-delay: calc( 20s / 5 * (5 - 1) * -1);
+}
+
+.cuadro2 {
+    background-color: grey;
+    animation-delay: calc( 20s / 5 * (5 - 2) * -1);
+}
+
+.cuadro3 {
+    background-color: indianred;
+    animation-delay: calc( 20s / 5 * (5 - 3) * -1);
+}
+
+.cuadro4 {
+    background-color: white;
+    animation-delay: calc( 20s / 5 * (5 - 4) * -1);
+}
+
+.cuadro5 {
+    background-color: lightpink;
+    animation-delay: calc( 20s / 5 * (5 - 5) * -1);
+}
+
+/*.cuadro6 {*/
+/*    background-color: bisque;*/
+/*    animation-delay: calc( 20s / 6 * (6 - 6) * -1);*/
+/*}*/
+
+@keyframes moverCarrusel {
     to {
-        transform: translateX(-50%);
+        left: -350px;
     }
 }
-/*calc(-6 * (300px + 1em))*/
 
 #objetivo-equipo {
     margin-top: 1em;
@@ -135,6 +165,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.nuestras-redes:hover {
+    cursor: pointer;
+    transform: scale(1.25);
 }
 
 .nombre-imagen {

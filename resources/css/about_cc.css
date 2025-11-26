@@ -60,9 +60,9 @@ main {
     width: 200px;
 }
 
-.logos-cc:hover, .logos-ei:hover {
+.logos-hover {
     cursor: pointer;
-    transform: scale(1.05);
+    animation: hover-logo 1s linear infinite;
 }
 
 #contenedor-definicion-cc > *:nth-child(3) {
@@ -376,3 +376,20 @@ main {
     cursor: pointer;
 }
 
+@keyframes hover-logo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contenedor-imagenesCC:hover,.contenedor-imagenesEI:hover {
+
+}
