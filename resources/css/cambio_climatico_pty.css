@@ -1,18 +1,18 @@
 body {
     background-color: #ABD1C6;
     display: grid;
-    grid-template-areas:    "header header"
-                            "nav nav"
-                            "main main"
-                            "footer footer";
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     min-height: 100vh;
     overflow: auto;
 }
 
-.activo p{
+.activo p {
     color: #0F3433;
     background-color: #F9BC60;
     border-radius: 0.5em;
@@ -48,12 +48,45 @@ section {
     margin-bottom: 2em;
 }
 
-.impactos_Panama, .acciones_Panama {
+.impactos_Panama,
+.acciones_Panama {
     background-color: #0F3433;
     color: white;
     padding-top: 1em;
     padding-bottom: 1em;
 }
+
+.contenedor_acciones {
+    margin: 0.5em;
+    display: grid;
+    grid-template-areas: "botones imagen texto_corto"
+        "texto_largo texto_largo texto_largo";
+        row-gap: 2em;
+}
+aside {
+    grid-area: botones;
+    font-size: 2em;
+    position: relative;
+    left: -1em;
+    cursor: pointer;
+}
+
+.acciones_Panama img{
+    grid-area: imagen;
+    width: 23em;
+    border-radius: 2em;
+}
+
+.texto_corto{
+    grid-area: texto_corto;
+    height: fit-content;
+}
+
+.texto_largo {
+    grid-area: texto_largo;
+}
+
+
 
 .contenedor_enlaces {
     display: flex;
@@ -90,38 +123,47 @@ a:hover {
     border-radius: 2em;
 }
 
-#canal_panama, #isla_gardiSugdub, #mosquitos {
+#canal_panama,
+#isla_gardiSugdub,
+#mosquitos {
     display: flex;
 }
 
-.contenedor_info_impacto{
-    width: 28%;
+.contenedor_info_impacto {
+    width: fit-content;
     font-size: 1em;
     display: flex;
     justify-content: center;
 }
 
-.contenedor_info_impacto p{
+.contenedor_info_impacto p {
     font-size: 1.2em;
     border: solid white 1px;
     padding: 0.5em;
     width: 16em;
 }
 
-aside {
-    font-size: 3em;
-}
-
 .acciones_numeros {
     background-color: #ABD1C6;
     color: #0F3433;
+    border: #0F3433 solid 2px;
     text-align: center;
     border-radius: 0 0.3em 0.3em 0;
-    width: 2em;
+    width: 3em;
+}
+
+.acciones_numeros:hover{
+    outline: solid #051d1c 2px;
 }
 
 .acciones_activa {
-    width: 4em;
-    border: #0F3433 solid 2px;
+    width: 4.5em;
     border-left: hidden;
+    font-weight: bolder;
+}
+
+.info_acciones{
+    border: solid white 1px;
+    padding: 0.5em;
+    font-size: 1em;
 }
