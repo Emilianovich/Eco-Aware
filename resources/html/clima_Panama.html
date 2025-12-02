@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
         <div class="opciones-nav">
             <p><a href="/html/about_cc.html">Acerca del Cambio climático</a></p>
         </div>
-        <div class="opciones-nav activo">
+        <div id="opcion-nav-seleccionada" class="opciones-nav">
             <p><a href="/html/clima_Panama.html">Cambio climático en Panamá</a></p>
         </div>
         <div class="opciones-nav">
@@ -37,6 +37,8 @@
     </nav>
 
     <main>
+
+        <img id="mascota" src="../images/Polardi_pensando.png"> 
 
         <section class="estado_Pais">
             <div class="titulos">
@@ -63,10 +65,10 @@
                 <p>Impactos del cambio climático en Panamá</p>
             </div>
 
-            <div class="contenedor_enlaces">
-                <a id="impacto_activo">El canal de Panamá</a>
-                <a>Isla Gradí Sugdub</a>
-                <a>Aumento de Enfermedades por Mosquitos</a>
+            <div class="contenedor_btn_impactos">
+                <button id="btn_panama" class="impacto_activo">El canal de Panamá</button>
+                <button id="btn_isla">Isla Gradí Sugdub</button>
+                <button id="btn_mosquito">Aumento de Enfermedades por Mosquitos</button>
             </div>
 
             <div id="canal_panama">
@@ -83,7 +85,7 @@
                 </div>
             </div>
 
-            <div id="isla_gardiSugdub">
+            <div id="isla_gardiSugdub" class="oculto">
                 <picture class="contenedor_img_impacto">
                     <img src="../images/isla_gardi.jpg" class="imagen_impacto">
                 </picture>
@@ -100,7 +102,7 @@
                 </div>
             </div>
 
-            <div id="mosquitos">
+            <div id="mosquitos" class="oculto">
                 <picture class="contenedor_img_impacto">
                     <img src="../images/mosquito_aedes.jpg" class="imagen_impacto">
                 </picture>
@@ -146,22 +148,22 @@
         <section class="acciones_Panama">
             <!--Las opciones de la izquierda-->
             <div id="contenedor_CCAC">
-                <p>Acciones que ha tomado Panamá</p>
+                <div class="titulos">
+                    <p>Acciones que ha tomado Panamá</p>
+                </div>
                 <!--Contenedor de CCAC-->
                 <div class="contenedor_acciones">
-                    <div class="titulos">
-                        <aside>
-                            <div class="acciones_numeros acciones_activa">
-                                <p>1</p>
-                            </div>
-                            <div class="acciones_numeros">
-                                <p>2</p>
-                            </div>
-                            <div class="acciones_numeros">
-                                <p>3</p>
-                            </div>
-                        </aside>
-                    </div>
+                    <aside>
+                        <div class="acciones_numeros acciones_activa btn_1">
+                            <p>1</p>
+                        </div>
+                        <div class="acciones_numeros btn_2">
+                            <p>2</p>
+                        </div>
+                        <div class="acciones_numeros btn_3">
+                            <p>3</p>
+                        </div>
+                    </aside>
                     <img src="../images/acciones_CCAC.png" alt="imagen del logo de CCAC">
                     <div class="info_acciones texto_corto">
                         <p>Panamá se unió a la Climate and Clean Air Coalition (CCAC) en 2018, comprometiéndose a
@@ -184,21 +186,25 @@
                             toneladas de CO2-eq entre 2022 y 2030.</p>
                     </div>
                 </div>
+            </div>
+
+            <div id="contenedor_Comite" class="oculto">
+                <div class="titulos">
+                    <p>Acciones que ha tomado Panamá</p>
+                </div>
                 <!--Contenedor de comité-->
                 <div class="contenedor_acciones">
-                    <div class="titulos">
-                        <aside>
-                            <div class="acciones_numeros">
-                                <p>1</p>
-                            </div>
-                            <div class="acciones_numeros acciones_activa">
-                                <p>2</p>
-                            </div>
-                            <div class="acciones_numeros">
-                                <p>3</p>
-                            </div>
-                        </aside>
-                    </div>
+                    <aside>
+                        <div class="acciones_numeros btn_1">
+                            <p>1</p>
+                        </div>
+                        <div class="acciones_numeros acciones_activa btn_2">
+                            <p>2</p>
+                        </div>
+                        <div class="acciones_numeros btn_3">
+                            <p>3</p>
+                        </div>
+                    </aside>
                     <!--Contenedor de la información de acciones-->
                     <img src="../images/comite_CambioClima.jpg" alt="imagen del comité">
                     <div class="info_acciones texto_corto">
@@ -224,43 +230,52 @@
             </div>
 
             <!--Contenedor de ferrocarril-->
-            <div class="contenedor_acciones">
+            <div id="contenedor_Ferrocarril" class="oculto">
                 <div class="titulos">
+                    <p>Acciones que ha tomado Panamá</p>
+                </div>
+                <div class="contenedor_acciones">
                     <aside>
-                        <div class="acciones_numeros">
+                        <div class="acciones_numeros btn_1">
                             <p>1</p>
                         </div>
-                        <div class="acciones_numeros">
+                        <div class="acciones_numeros btn_2">
                             <p>2</p>
                         </div>
-                        <div class="acciones_numeros acciones_activa">
+                        <div class="acciones_numeros acciones_activa btn_3">
                             <p>3</p>
                         </div>
                     </aside>
-                </div>
-                <!--Contenedor de la información de acciones-->
-                <img src="../images/ferrocarril_fase1.jpg" alt="imagen del comité">
-                <div class="info_acciones texto_corto">
-                    <p>La Secretaría Nacional del Ferrocarril de Panamá inició el Estudio de Impacto Ambiental Categoría
-                        III para la Fase 1 del proyecto ferroviario Panamá–David, en colaboración con la firma
-                        internacional WSP. Esta etapa, busca garantizar que el proyecto se realice bajo los más altos
-                        estándares de sostenibilidad.</p>
-                </div>
-                <div class="info_acciones texto_largo">
-                    <p>El EsIA se enfoca en el levantamiento de la línea base ambiental, social y cultural a lo largo
-                        del trazado inicial (Panamá–Divisa), que abarca las provincias de Panamá, Panamá Oeste, Coclé y
-                        Herrera, con los trabajos de campo iniciándose en noviembre de 2025 y extendiéndose hasta marzo
-                        de 2026. Durante esta fase se recopilará información crucial para definir las medidas de
-                        prevención, mitigación y compensación ambiental que aseguren la ejecución sostenible y
-                        responsable del proyecto. </p><br>
+                    <!--Contenedor de la información de acciones-->
+                    <img src="../images/ferrocarril_fase1.jpg" alt="imagen del comité">
+                    <div class="info_acciones texto_corto">
+                        <p>La Secretaría Nacional del Ferrocarril de Panamá inició el Estudio de Impacto Ambiental
+                            Categoría
+                            III para la Fase 1 del proyecto ferroviario Panamá–David, en colaboración con la firma
+                            internacional WSP. Esta etapa, busca garantizar que el proyecto se realice bajo los más
+                            altos
+                            estándares de sostenibilidad.</p>
+                    </div>
+                    <div class="info_acciones texto_largo">
+                        <p>El EsIA se enfoca en el levantamiento de la línea base ambiental, social y cultural a lo
+                            largo
+                            del trazado inicial (Panamá–Divisa), que abarca las provincias de Panamá, Panamá Oeste,
+                            Coclé y
+                            Herrera, con los trabajos de campo iniciándose en noviembre de 2025 y extendiéndose hasta
+                            marzo
+                            de 2026. Durante esta fase se recopilará información crucial para definir las medidas de
+                            prevención, mitigación y compensación ambiental que aseguren la ejecución sostenible y
+                            responsable del proyecto. </p><br>
 
-                    <p>Además de alinearse con las normas panameñas y de la Banca Multilateral, el estudio pone un
-                        fuerte énfasis en el componente social, buscando integrar a las comunidades a través de
-                        encuestas, entrevistas y espacios de diálogo para que sean parte activa del proceso de toma de
-                        decisiones. El Secretario Nacional, Henry Faarup, destacó que el tren busca ser un símbolo de
-                        integración y progreso nacional que respete el entorno natural.</p>
+                        <p>Además de alinearse con las normas panameñas y de la Banca Multilateral, el estudio pone un
+                            fuerte énfasis en el componente social, buscando integrar a las comunidades a través de
+                            encuestas, entrevistas y espacios de diálogo para que sean parte activa del proceso de toma
+                            de
+                            decisiones. El Secretario Nacional, Henry Faarup, destacó que el tren busca ser un símbolo
+                            de
+                            integración y progreso nacional que respete el entorno natural.</p>
+                    </div>
                 </div>
-            </div>
             </div>
 
         </section>
@@ -268,7 +283,8 @@
     <footer>
         <p>©Eco Aware - Samuel, Emiola y Eloy 2025</p>
     </footer>
-    <script src="../js/index.js"></script>
+    <script type="module" src="/js/index.js"></script>
+    <script type="module" src="/js/clima_Panama.js"></script>
 </body>
 
 </html>
