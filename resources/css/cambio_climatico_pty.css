@@ -174,7 +174,7 @@ button:hover {
     display: none !important;
 }
 
-#mascota {
+#mascota_pensando {
     width: 6em;
     position: fixed;
     z-index: 1;
@@ -183,6 +183,31 @@ button:hover {
     opacity: 0.2;
 }
 
-#mascota:hover{
+#mascota_pensando:hover{
     opacity: 1;
+}
+
+#contenedor-datos_curiosos {
+    position: fixed;
+    top: 40%;
+    left: 32%;
+    z-index: 1;
+    background-color: white;
+    border-radius: 2em;
+    padding: 2em;
+    width: 30%;
+}
+
+#enlace_dato_curioso {
+    text-decoration: underline;
+    color: #051d1c;
+    cursor: pointer;
+}
+
+#mascota_hablando {
+    position: fixed;
+    z-index: 1;
+    top: 33%;
+    left: 61%;
+    width: 12em;
 }
