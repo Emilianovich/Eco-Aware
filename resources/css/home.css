@@ -19,17 +19,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     padding: 1em;
 }
 
-#comilla {
+p span {
     font-size: 3.5rem;
-    position: absolute;
-    display: block;
-    height: 28px;
-    top: 0;
-    left: 22%;
 }
 
 #contenedor-frase article div p {
