@@ -73,7 +73,7 @@ const imgMascota_Pensando = document.getElementById("mascota_pensando");
 
 const datos_texto = [
     "Aunque pueda parecer poco, medio grado adicional en la temperatura promedio del planeta tiene un gran impacto en el planeta, como el aumento del mar, aumento de sequías, pérdida de biodiversidad, entre otros",
-    "Los océanos han absorbido casi el 90 % del calor extra generado por el calentamiento global, lo que los convierte en el principal “sumidero térmico” del planeta.",
+    "Los océanos han absorbido casi el 90% del calor extra generado por el calentamiento global, lo que los convierte en el principal “sumidero térmico” del planeta.",
     "El hielo y la nieve tienen un albedo muy alto, por lo que reflejan gran parte de la radiación del sol. Cuando se derriten, dejan expuestas superficies más oscuras, como agua o roca, que absorben mucho más calor.",
     "Las ganaderías, especialmente las de vacas, generan más gases de efecto invernadero que algunos países, porque las vacas emiten grandes cantidades de metano durante su digestión, un gas que atrapa mucho más calor que el CO₂.",
     "Una molécula de dióxido de carbono puede permanecer en la atmósfera entre 300 y 1 000 años antes de desaparecer. Esto significa que parte del CO₂ que emitimos hoy seguirá calentando el planeta durante muchos siglos.",
@@ -109,7 +109,9 @@ const datos_enlace = [
 
 /*Creando el div de datos curiosos*/ 
 imgMascota_Pensando.addEventListener('click', () => {
-    let numDato = Math.floor(Math.random() * 15);
+    const contenedor = document.createElement('div');
+    contenedor.id ='blur-activo';
+    let numDato = Math.floor(Math.random() * 14);
     imgMascota_Pensando.classList.add("oculto");
     const div = document.createElement('div');
     const titulo = document.createElement('h3');
@@ -120,23 +122,27 @@ imgMascota_Pensando.addEventListener('click', () => {
     div.appendChild(dato_curioso);
     div.id = 'contenedor-datos_curiosos';
     let dato_enlace = document.createElement('a');
-    dato_enlace.textContent = "Leer mas...";
+    dato_enlace.textContent = "Leer más...";
     dato_enlace.href = datos_enlace[numDato];
+    dato_enlace.setAttribute("target", "_blank");
     dato_enlace.id = 'enlace_dato_curioso';
     div.appendChild(dato_enlace);
     const imgMascota_hablando = document.createElement('img');
     imgMascota_hablando.id = "mascota_hablando";
     imgMascota_hablando.src = "../images/Polardi_hablando.png";
-    document.body.appendChild(div);
-    document.body.appendChild(imgMascota_hablando);
+    document.body.appendChild(contenedor);
+    contenedor.appendChild(div);
+    contenedor.appendChild(imgMascota_hablando);
 });
 
 
 /*Borrando el div de datos curiosos*/ 
 document.addEventListener('click', (e) => {
+    const contenedor = document.getElementById('blur-activo');
     const div = document.getElementById('contenedor-datos_curiosos');
     const imgMascota_hablando = document.getElementById('mascota_hablando');
     if(div && !div.contains(e.target) && e.target !== imgMascota_Pensando || imgMascota_hablando.contains(e.target)){
+        contenedor.remove("blur-activo");
         div.remove();
         imgMascota_hablando.remove();
         imgMascota_Pensando.classList.remove("oculto");
