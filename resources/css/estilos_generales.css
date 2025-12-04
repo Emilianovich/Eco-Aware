@@ -187,7 +187,8 @@ footer p {
     border-radius: 2em;
     padding: 2em;
     width: 30%;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    letter-spacing: 1px;
 }
 
 #enlace_dato_curioso {

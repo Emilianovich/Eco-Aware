@@ -42,7 +42,8 @@ section {
 .contenedor_info {
     border: solid #0F3433 1px;
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 1.2em;
+    letter-spacing: 1px;
 }
 
 .estado_Pais {
@@ -174,6 +175,7 @@ button:hover {
 .info_acciones{
     border: solid white 1px;
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 1.1em;
+    letter-spacing: 1px;
 }
 
