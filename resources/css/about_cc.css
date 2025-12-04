@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    border: 2px solid black;
 }
 
 #contenedor-definicion-cc {
@@ -151,6 +152,10 @@ main {
     border-radius: 100%;
     width: 70%;
     height: auto;
+}
+
+#imagen-selectra {
+    width: 60%;
 }
 
 .logos-ei-hover {
@@ -390,6 +395,72 @@ main {
     }
 }
 
-.contenedor-imagenesCC:hover,.contenedor-imagenesEI:hover {
+#contenedor-evidencia-cc article div:nth-child(1),
+.everyLogo:nth-child(1),
+.cuadro-imagen:nth-child(1),
+.cuadro-imagen:nth-child(2),
+#contenedor-imagen-impacto-cc {
+    transform: translateX(-100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
 
+#contenedor-evidencia-cc article div:nth-child(2),
+.everyLogo:nth-child(2) {
+    transform: translateY(-100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#contenedor-evidencia-cc article div:nth-child(3),
+.everyLogo:nth-child(3),
+.cuadro-imagen:nth-child(3),
+.cuadro-imagen:nth-child(4) {
+    transform: translateX(100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#contenedor-evidencia-cc article div:nth-child(1).entrada-transicion,
+.everyLogo:nth-child(1).entrada-transicion,
+.cuadro-imagen:nth-child(1).entrada-transicion,
+.cuadro-imagen:nth-child(2).entrada-transicion ,
+#contenedor-imagen-impacto-cc.entrada-transicion {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#contenedor-evidencia-cc article div:nth-child(2).entrada-transicion,
+.everyLogo:nth-child(2).entrada-transicion {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#contenedor-evidencia-cc article div:nth-child(3).entrada-transicion,
+.everyLogo:nth-child(3).entrada-transicion,
+.cuadro-imagen:nth-child(3).entrada-transicion,
+.cuadro-imagen:nth-child(4).entrada-transicion {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.antes-entrada-transicion {
+    transform: translateX(-100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+.entrada-transicion-cg {
+    animation: animacion-galeria 500ms ease-in forwards;
+}
+
+@keyframes animacion-galeria {
+    from {
+        transform: translateX(-100px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

@@ -17,7 +17,7 @@ imagenesCarousel.forEach((imagen,index) => {
             "}";
         contenedorCarousel.append(pausarAnimacion);
         imagen.addEventListener("click", ()=> {
-            window.location.href = urlImagenesCC[index];
+            window.open(urlImagenesCC[index]);
         })
     });
     imagen.addEventListener("mouseout", ()=> {

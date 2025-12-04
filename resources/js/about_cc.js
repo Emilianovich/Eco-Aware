@@ -47,7 +47,7 @@ for (let i = 0; i < contenedorImagenesCG.length; i++) {
 }
 
 /*Manejo de las imágenes del efecto invernadero*/
-const eiLogoSelecionado = Array.from(document.querySelectorAll(".logos-ei"));
+const eiLogoSelecionado = Array.from(document.querySelectorAll(".contenedor-imagenesEI"));
 let eiLogoAnteriorSelecionado = document.querySelector(".logo-ei-seleccionado");
 const definicionEI = document.getElementById("definicion-ei");
 const definicionesEI = [
@@ -117,6 +117,10 @@ const infoConsecuenciasCG = [
 ];
 
 function moverGaleria(indice) {
+    if (contenedorImagenCG.classList.contains("entrada-transicion-cg")) {
+        contenedorImagenCG.classList.remove("entrada-transicion-cg");
+        console.log("En el if de mover galería")
+    }
     ImagenCG.src = infoConsecuenciasCG[indice].imagen;
     ImagenCG.alt = infoConsecuenciasCG[indice].alt;
     nombreTituloConsecuencia.textContent = infoConsecuenciasCG[indice].titulo;
@@ -165,3 +169,26 @@ contenedorImagenCG.addEventListener("mouseout", () => {
     ImagenCG.classList.remove("cambiar-opacidad-img");
     nombreTituloConsecuencia.classList.remove("cambiar-color-texto-img");
 });
+
+/*Lógica para el observer*/
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("entrada-transicion");
+        }
+        else {
+            entry.target.classList.remove("entrada-transicion");
+        }
+    })
+}, {
+    threshold: 0
+})
+const imagenesHistoricas = document.querySelectorAll("#contenedor-evidencia-cc article div");
+
+imagenesHistoricas.forEach((imagen) => observer.observe(imagen))
+
+const everyLogo = document.querySelectorAll(".everyLogo");
+everyLogo.forEach((logo) => observer.observe(logo));
+const divImagenesCG = document.querySelectorAll(".cuadro-imagen");
+divImagenesCG.forEach((imagen) => observer.observe(imagen));
+observer.observe(contenedorImagenCG);
