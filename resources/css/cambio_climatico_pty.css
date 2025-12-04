@@ -97,7 +97,7 @@ aside {
 
 .contenedor_btn_impactos {
     display: flex;
-    gap: 13em;
+    gap: 11em;
     justify-content: center;
     margin-bottom: 1em;
 }
@@ -177,56 +177,3 @@ button:hover {
     font-size: 1em;
 }
 
-/*Cosas para los datos curiosos*/
-.oculto {
-    display: none !important;
-}
-
-#mascota_pensando {
-    width: 6em;
-    position: fixed;
-    z-index: 1;
-    top: 75%;
-    left: 90%;
-    opacity: 0.2;
-}
-
-#mascota_pensando:hover{
-    opacity: 1;
-}
-
-#contenedor-datos_curiosos {
-    position: fixed;
-    top: 33%;
-    left: 32%;
-    z-index: 2;
-    background-color: white;
-    border-radius: 2em;
-    padding: 2em;
-    width: 30%;
-    font-size: 1.2em;
-}
-
-#enlace_dato_curioso {
-    text-decoration: underline;
-    color: #051d1c;
-    cursor: pointer;
-}
-
-#mascota_hablando {
-    position: fixed;
-    z-index: 2;
-    top: 33%;
-    left: 63%;
-    width: 12em;
-}
-
-#blur-activo {
-    position: fixed;
-    z-index: 1;
-    backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
-    width: 100%;
-    height: 100%;
-}
