@@ -24,6 +24,7 @@ main {
 
 p span {
     font-size: 3.5rem;
+    color: #004643;
 }
 
 #contenedor-frase article div p {
@@ -32,12 +33,14 @@ p span {
     font-size: 1.25rem;
     font-weight: 100; /*Creo que está de más*/
     letter-spacing: 1px;
+    color: #004643;
 }
 
 #no-nos-crees {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #004643;
 }
 
 #no-nos-crees p {
@@ -124,10 +127,11 @@ p span {
     align-items: center;
     width: 100%;
     gap: 0.5em;
+    color: #004643;
 }
 
 #objetivo-equipo article>p {
-    border: 1px solid black;
+    border: 1px solid #004643;
     width: 80%;
     margin: auto;
     padding: 0.5em;

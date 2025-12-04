@@ -2,7 +2,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    border: 2px solid black;
 }
 
 #contenedor-definicion-cc {
@@ -67,7 +66,7 @@ main {
 }
 
 #contenedor-definicion-cc > *:nth-child(3) {
-    border: 1px solid black;
+    border: 1px solid #004643;
     padding: 1.5em;
     margin-left: 1em;
     margin-right: 1em;
@@ -105,7 +104,7 @@ main {
 }
 
 #contenedor-evidencia-cc > *:nth-child(3)  {
-    border: 1px solid black;
+    border: 1px solid #004643;
     padding: 1.5em;
     margin-left: 1em;
     margin-right: 1em;

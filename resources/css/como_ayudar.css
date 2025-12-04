@@ -21,7 +21,7 @@ main {
 }
 
 #contenedor-intro-ayuda article {
-    border: 1px solid black;
+    border: 1px solid #004643;
     width: 95%;
     padding: 1.5em;
     box-sizing: border-box;
@@ -208,7 +208,7 @@ main {
 }
 
 #texto-accion-colectiva div.contenedor-info-accion {
-    border: 1px solid black;
+    border: 1px solid #004643;
 }
 
 #texto-accion-colectiva h2 {
@@ -238,7 +238,6 @@ main {
     row-gap: 5em;
     column-gap: 2em;
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 #titulo-mitigacion {
