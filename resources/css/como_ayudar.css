@@ -1,0 +1,339 @@
+body {
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "intro-ayuda intro-ayuda"
+                          "accion-personal accion-personal"
+                           "accion-colectiva accion-colectiva"
+                          "adaptacion adaptacion";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    row-gap: 1em;
+}
+
+#contenedor-intro-ayuda {
+    grid-area: intro-ayuda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-intro-ayuda article {
+    border: 1px solid black;
+    width: 95%;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+#contenedor-intro-ayuda article p {
+    font-size: 1.5rem;
+    color: #004643;
+}
+
+#contenedor-accion-personal {
+    grid-area: accion-personal;
+    display: grid;
+    grid-template-areas: "texto-titulo-personal imagen-acciones-lista-personal"
+                         "texto-titulo-personal imagen-acciones-lista-personal";
+    gap: 0.5em;
+    grid-template-columns: 43% 55%;
+    background-color: #0F3433;
+    height: fit-content;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+#texto-accion-personal {
+    grid-area: texto-titulo-personal;
+}
+
+#texto-accion-personal,
+#texto-accion-colectiva{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+#texto-accion-personal h2,
+#titulo-mitigacion h2 {
+    color: white;
+}
+
+#texto-accion-personal h2,
+#texto-accion-colectiva h2 {
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
+.contenedor-info-accion {
+    border: 1px solid white;
+    padding: 1em;
+}
+
+.contenedor-info-accion p {
+    font-size: 1.24rem;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-align: justify;
+}
+
+#contenedor-imagen-acciones-lista {
+    grid-area: imagen-acciones-lista-personal;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/*Contenedor de la imagen de las acciones a nivel personal y familiar*/
+#contenedor-imagen-acciones-lista:nth-child(1) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imagen-acciones-lista {
+    width: 90%;
+    height: 300px;
+    border-radius: 0.5em;
+}
+
+.imagen-acciones-lista img {
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+}
+
+#opciones-accion-personal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    width: fit-content;
+    height: fit-content;
+}
+
+.opcion-acciones-personal,
+.opcion-acciones-colectiva,
+.opcion-acciones-adaptacion {
+    color: white;
+    font-size: 1.35rem;
+    background-color: rgba(93, 173, 150, 0.62);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    letter-spacing: 2px;
+}
+
+.ap-seleccionada,
+.mitigacion-seleccionada {
+    background-color: #5DAD96;
+    color: black;
+}
+
+/*Contenedor de la lista de acciones*/
+#acciones-personales-lista,
+#acciones-colectivas-lista,
+#acciones-mitigacion-lista{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+#acciones-personales-lista ul,
+#acciones-colectivas-lista ul,
+#acciones-mitigacion-lista ul{
+    margin-left: 3em;
+}
+
+#acciones-personales-lista li,
+#acciones-mitigacion-lista li{
+    color: white;
+}
+
+#acciones-personales-lista li,
+#acciones-colectivas-lista li,
+#acciones-mitigacion-lista li{
+    font-size: 1.45rem;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+#contenedor-accion-colectiva {
+    grid-area: accion-colectiva;
+    display: grid;
+    grid-template-areas: "imagen-acciones-lista-colectivo texto-titulo-colectivo"
+                         "imagen-acciones-lista-colectivo texto-titulo-colectivo";
+    gap: 0.5em;
+    grid-template-columns: 55% 43%;
+    height: fit-content;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+#imagen-opciones-lista-colectiva {
+    grid-area: imagen-acciones-lista-colectivo;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#opciones-accion-colectiva {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#opciones-accion-colectiva div {
+    color: black;
+    width: fit-content;
+}
+
+#texto-accion-colectiva {
+    grid-area: texto-titulo-colectivo;
+}
+
+.ac-seleccionada {
+    background-color: #5DAD96;
+}
+
+.opciones-acciones-hover {
+    transform: scale(0.95);
+    transition: 500ms ease-in-out;
+}
+
+#texto-accion-colectiva div.contenedor-info-accion {
+    border: 1px solid black;
+}
+
+#texto-accion-colectiva h2 {
+    font-size: 1.75rem;
+    font-weight: normal;
+    color: #004643;
+}
+
+#texto-accion-colectiva div.contenedor-info-accion p{
+    font-size: 1.32rem;
+    letter-spacing: 1px;
+    color: #004643;
+}
+
+#acciones-colectivas-lista li {
+    color: #004643;
+}
+
+#contenedor-mitigacion {
+    grid-area: adaptacion;
+    background-color: #0F3433;
+    display: grid;
+    grid-template-areas: "titulo-adaptacion titulo-adaptacion"
+                          "texto-adaptacion imagen-lista-adaptacion";
+    grid-template-columns: 43% 55%;
+    padding: 2em;
+    row-gap: 5em;
+    column-gap: 2em;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+#titulo-mitigacion {
+    grid-area: titulo-adaptacion;
+}
+
+#titulo-mitigacion h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+#texto-accion-mitigacion {
+    grid-area: texto-adaptacion;
+}
+
+#imagen-opciones-lista-mitigacion {
+    grid-area: imagen-lista-adaptacion;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+/*Contenedor de la imagen de adaptación*/
+#contenedor-imagen-mitigacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#contenedor-imagen-mitigacion picture.imagen-acciones-lista {
+    width: 100%;
+}
+#imagen-mitigacion {
+    width: 100%;
+}
+
+#opciones-accion-mitigacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    margin-left: 4em;
+}
+
+.opcion-acciones-adaptacion {
+    width: fit-content;
+    padding: 0.5em;
+}
+
+.opcion-acciones-adaptacion:nth-child(1) {
+    margin-right: 5em;
+}
+
+.opcion-acciones-adaptacion p {
+    letter-spacing: 2px;
+}
+
+/*Animaciones observer*/
+#contenedor-intro-ayuda {
+    transform: translateY(100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#contenedor-intro-ayuda.transicion-entrada {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#texto-accion-personal,
+#imagen-opciones-lista-colectiva,
+#texto-accion-mitigacion{
+    transform: translateX(-100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#contenedor-imagen-acciones-lista,
+#texto-accion-colectiva,
+#imagen-opciones-lista-mitigacion{
+    transform: translateX(100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#texto-accion-personal.transicion-entrada,
+#contenedor-imagen-acciones-lista.transicion-entrada,
+#texto-accion-colectiva.transicion-entrada,
+#imagen-opciones-lista-colectiva.transicion-entrada,
+#texto-accion-mitigacion.transicion-entrada,
+#imagen-opciones-lista-mitigacion.transicion-entrada{
+    transform: translateX(0);
+    opacity: 1;
+}
+

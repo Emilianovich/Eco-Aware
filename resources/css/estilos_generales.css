@@ -68,7 +68,7 @@ header {
 nav {
     grid-area: nav;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #0F3433;
     height: auto;
