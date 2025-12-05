@@ -28,21 +28,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: relative;
-}
-
-.flecha-izquierda {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 40px;
-}
-
-.flecha-derecha {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 40px;
+    height: 200px;
 }
 
 .contenedor-imagenesCC {
@@ -57,7 +43,7 @@ main {
 }
 
 .logo-cc-seleccionado {
-    width: 200px;
+    width: 170px;
 }
 
 .logos-hover {
@@ -67,9 +53,13 @@ main {
 
 #contenedor-definicion-cc > *:nth-child(3) {
     border: 1px solid #004643;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.5em;
     margin-left: 1em;
     margin-right: 1em;
+    height: 125px;
 }
 
 #contenedor-definicion-cc > *:nth-child(3) p, #contenedor-evidencia-cc > *:nth-child(3) p  {
@@ -112,9 +102,15 @@ main {
 
 #contenedor-ei {
     background-color: #004643;
-    position: relative;
     display: flex;
     flex-direction: column;
+}
+
+#contenedor-definicion-ei {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 #contenedor-ei > *:nth-child(1) {
@@ -135,6 +131,7 @@ main {
     position: relative;
     justify-content: space-evenly;
     align-items: center;
+    height: 200px;
 }
 
 .contenedor-imagenesEI {
@@ -162,7 +159,7 @@ main {
 }
 
 .logo-ei-seleccionado {
-    width: 210px;
+    width: 170px;
     height: auto;
 }
 
@@ -342,6 +339,7 @@ main {
     justify-content: space-around;
     align-items: center;
     width: fit-content;
+    height: 250px;
 }
 
 #contenedor-texto-consecuencia {

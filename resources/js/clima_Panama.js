@@ -68,3 +68,27 @@ btn_3.forEach(boton => {
     });
 });
 
+/*Observer*/
+const contenedorEstadoPais = document.querySelector(".estado_Pais");
+const tituloImpactoPTY = document.querySelectorAll(".titulos"); //loopear con forEach
+const contenedorBtnsImpacto = document.querySelectorAll(".contenedor_btn_impactos button");
+const seccionCuatroKids = document.querySelector(".niños_Panama");
+const opcionesAside = document.querySelectorAll("aside div"); //loopear con forEach
+const contenidoObservable = [contenedorEstadoPais,
+                                    seccionCuatroKids];
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('entrada-transicion');
+        }
+        else {
+            entry.target.classList.remove('entrada-transicion');
+        }
+    })
+})
+
+contenedorBtnsImpacto.forEach((btn) => observer.observe(btn));
+contenidoObservable.forEach((elemento) => observer.observe(elemento));
+tituloImpactoPTY.forEach((titulo) => observer.observe(titulo));
+opcionesAside.forEach((opcion) => observer.observe(opcion));

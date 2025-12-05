@@ -89,7 +89,7 @@ const listaMitigacion = document.querySelectorAll("#acciones-mitigacion-lista ul
 const imagenMitigacion = document.getElementById("imagen-mitigacion");
 const accionesImagenesMitigacion = [
     {src: "../images/ante-calor-extremo.webp", acciones : [
-            "Vestir ropa suelta, colores claros y manga larga al aire libre.",
+            "Utilizar ropa suelta, colores claros y manga larga al aire libre.",
             "No hacer actividad física intensa bajo el sol.",
             "Comer alimentos frescos, frutas y verduras."
         ]},
@@ -133,6 +133,7 @@ const contenedorTextoAP = document.getElementById("texto-accion-personal");
 const contenedorImagenAccionesAP = document.getElementById("contenedor-imagen-acciones-lista");
 const contenedorTextoAC = document.getElementById("texto-accion-colectiva");
 const contenedorImagenAccionesAC= document.getElementById("imagen-opciones-lista-colectiva");
+const contenedorTituloMitigacion = document.getElementById("titulo-mitigacion");
 const contenedorTextoMitigacion = document.getElementById("texto-accion-mitigacion");
 const contenedorImagenMitigacion = document.getElementById("imagen-opciones-lista-mitigacion");
 const elementosObservables = [contenedorIntroAyuda,
@@ -140,6 +141,7 @@ const elementosObservables = [contenedorIntroAyuda,
                                             contenedorImagenAccionesAP,
                                             contenedorTextoAC,
                                             contenedorImagenAccionesAC,
+                                            contenedorTituloMitigacion,
                                             contenedorTextoMitigacion,
                                             contenedorImagenMitigacion];
 const observer = new IntersectionObserver((entries) => {
@@ -157,6 +159,5 @@ const observer = new IntersectionObserver((entries) => {
 
 
 elementosObservables.forEach(elemento => {
-    console.log(elemento);
     observer.observe(elemento);
 })

@@ -30,7 +30,7 @@ p span {
 #contenedor-frase article div p {
     max-width: 68ch;
     text-align: right;
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     font-weight: 100; /*Creo que está de más*/
     letter-spacing: 1px;
     color: #004643;
@@ -44,7 +44,7 @@ p span {
 }
 
 #no-nos-crees p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
 }
 
@@ -128,6 +128,10 @@ p span {
     width: 100%;
     gap: 0.5em;
     color: #004643;
+}
+
+#pregunta-objetivo-equipo {
+    font-size: 1.75rem;
 }
 
 #objetivo-equipo article>p {
@@ -219,4 +223,55 @@ p span {
 
 footer {
     margin-top: 1em;
+}
+
+/*Animaciones para el observer*/
+
+#contenedor-frase article,
+#objetivo-equipo article h2 {
+    transform: translateX(-400px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#no-nos-crees p,
+#contenedor-objetivo-texto{
+    transform: translateX(400px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#texto-objetivo {
+    font-size: 1.50rem;
+}
+
+#contenedor-samuel {
+     transform: translateX(-100px);
+ }
+
+#contenedor-emiola {
+    transform: translateX(-50px);
+}
+
+#contenedor-eloy {
+    transform: translateX(-30px);
+}
+
+#contenedor-samuel,
+#contenedor-emiola,
+#contenedor-eloy {
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+#contenedor-frase article.entrada-transicion,
+#no-nos-crees p.entrada-transicion,
+#objetivo-equipo article h2.entrada-transicion,
+#contenedor-objetivo-texto.entrada-transicion,
+#contenedor-samuel.entrada-transicion,
+#contenedor-emiola.entrada-transicion,
+#contenedor-eloy.entrada-transicion
+{
+    transform: translateX(0);
+    opacity: 1;
 }

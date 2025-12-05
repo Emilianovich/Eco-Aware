@@ -99,7 +99,9 @@ main {
 }
 
 .imagen-acciones-lista {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 300px;
     border-radius: 0.5em;
 }
@@ -143,12 +145,13 @@ main {
     display: flex;
     align-items: center;
     height: 300px;
+    margin-left: 2em;
 }
 
 #acciones-personales-lista ul,
 #acciones-colectivas-lista ul,
 #acciones-mitigacion-lista ul{
-    margin-left: 3em;
+    max-width: 100ch;
 }
 
 #acciones-personales-lista li,
@@ -273,6 +276,7 @@ main {
 #contenedor-imagen-mitigacion picture.imagen-acciones-lista {
     width: 100%;
 }
+
 #imagen-mitigacion {
     width: 100%;
 }
@@ -291,7 +295,7 @@ main {
 }
 
 .opcion-acciones-adaptacion:nth-child(1) {
-    margin-right: 5em;
+
 }
 
 .opcion-acciones-adaptacion p {
@@ -312,6 +316,7 @@ main {
 
 #texto-accion-personal,
 #imagen-opciones-lista-colectiva,
+#titulo-mitigacion,
 #texto-accion-mitigacion{
     transform: translateX(-100px);
     transition: 500ms ease-in;
@@ -330,6 +335,7 @@ main {
 #contenedor-imagen-acciones-lista.transicion-entrada,
 #texto-accion-colectiva.transicion-entrada,
 #imagen-opciones-lista-colectiva.transicion-entrada,
+#titulo-mitigacion.transicion-entrada,
 #texto-accion-mitigacion.transicion-entrada,
 #imagen-opciones-lista-mitigacion.transicion-entrada{
     transform: translateX(0);

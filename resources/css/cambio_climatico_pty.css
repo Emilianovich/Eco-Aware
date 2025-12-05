@@ -34,7 +34,7 @@ section {
 }
 
 .mapa_Panama {
-    width: 32rem;
+    width: 60%;
     border-radius: 2em;
     margin: 1em 0 1em 0;
 }
@@ -179,3 +179,59 @@ button:hover {
     letter-spacing: 1px;
 }
 
+/*Animaciones observer*/
+.estado_Pais,
+.niños_Panama {
+    transform: translateX(-400px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+.estado_Pais.entrada-transicion,
+.contenedor_btn_impactos button:nth-child(1).entrada-transicion,
+.contenedor_btn_impactos button:nth-child(2).entrada-transicion,
+.contenedor_btn_impactos button:nth-child(3).entrada-transicion,
+.niños_Panama.entrada-transicion {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.titulos {
+    transform: translateY(-20px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+.titulos.entrada-transicion {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contenedor_btn_impactos button:nth-child(1) {
+    transform: translateX(-200px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+.contenedor_btn_impactos button:nth-child(2) {
+    transform: translateX(-150px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+.contenedor_btn_impactos button:nth-child(3) {
+    transform: translateX(-100px);
+    transition: 500ms ease-in;
+    opacity: 0.5;
+}
+
+aside div {
+    transform: scale(0.5);
+    opacity: 0.5;
+    transition: 500ms ease-in;
+}
+
+aside div.entrada-transicion {
+    transform: scale(1);
+    opacity: 1;
+}

@@ -96,7 +96,7 @@ imgMascota_Pensando.addEventListener('click', () => {
     imgMascota_Pensando.classList.add("oculto");
     const div = document.createElement('div');
     const titulo = document.createElement('h3');
-    titulo.textContent = "Sabías que...";
+    titulo.textContent = "¿Sabías que?";
     div.appendChild(titulo);
     let dato_curioso = document.createElement('p');
     dato_curioso.textContent = datos_texto[numDato];
@@ -129,3 +129,33 @@ document.addEventListener('click', (e) => {
         imgMascota_Pensando.classList.remove("oculto");
     }
 });
+
+/*Interactividad con el observer*/
+if (document.title === "Eco Aware") {
+    const contenedorFraseIndex = document.querySelector("#contenedor-frase article");
+    const fraseNoNosCrees = document.querySelector("#no-nos-crees p");
+    const fraseObjetivoEquipo = document.querySelector("#objetivo-equipo article h2");
+    const contenedorObjetivoEquipo = document.getElementById("contenedor-objetivo-texto");
+    const contenedorInfoEquipo = document.querySelectorAll("#equipo-eco-aware article");
+    const elementosObservables = [contenedorFraseIndex,
+        fraseNoNosCrees,
+        fraseObjetivoEquipo,
+        contenedorObjetivoEquipo];
+    console.log(`El tipo dato de datos ${typeof elementosObservables} de ${elementosObservables}`);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('entrada-transicion');
+            }
+            else {
+                entry.target.classList.remove('entrada-transicion');
+            }
+        })
+    })
+
+    elementosObservables.forEach(elemento => {observer.observe(elemento);
+    })
+    contenedorInfoEquipo.forEach((integrante) => {
+        observer.observe(integrante);
+    })
+}
