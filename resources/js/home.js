@@ -4,7 +4,7 @@ const pausarAnimacion = document.createElement("style");
 const urlImagenesCC = [
     "https://elpais.com/clima-y-medio-ambiente/2025-11-06/cientos-de-delfines-muertos-por-los-41-grados-de-record-en-las-aguas-amazonicas-estaba-tan-caliente-que-no-tenian-refugio.html",
     "https://elpais.com/clima-y-medio-ambiente/2025-08-27/la-extraordinaria-oleada-de-incendios-de-agosto-ha-afectado-a-160000-hectareas-de-espacios-protegidos.html",
-    "https://elpais.com/planeta-futuro/2024-11-12/no-puedo-olvidar-aquella-noche-nuestra-casa-se-inundo-en-minutos-60000-personas-huyen-de-su-hogar-cada-dia-por-la-crisis-climatica-segun-acnur.htm",
+    "https://www.acnur.org/noticias/notas-de-prensa/yemen-aumentan-las-necesidades-para-millones-de-personas-desplazadas",
     "https://www.infobae.com/america/mundo/2025/10/05/el-deshielo-de-permafrost-en-alaska-revela-riesgos-invisibles-para-infraestructuras-y-clima-global/",
     "https://dndial.org/es/releases/2025/el-cambio-climatico-agravara-los-brotes-de-enfermedades-desatendidas-la-adaptacion-es-urgente/"
 ];

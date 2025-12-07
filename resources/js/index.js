@@ -21,7 +21,12 @@ logoHome.addEventListener("mouseover", () => {
     logoHome.style.cursor = "pointer";
 })
 logoHome.addEventListener("click", () => {
-    window.location.href = "/html/index.html";
+    if (document.title === "Eco Aware") {
+        window.location.href = "/index.html";
+    }
+    else {
+        window.location.href = "../index.html";
+    }
 });
 
 /*Selección del nav*/
